@@ -4,21 +4,6 @@
     "pages/show/show",
     "pages/user/user"
   ],
-  "tabBar": {
-    "color": "#FFE0E1",
-    "selectedColor": "#FD1015",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "Main",
-      "iconPath": "image/homelight.png",
-      "selectedIconPath": "image/home.png"
-    }, {
-      "pagePath": "pages/user/user",
-      "text": "User",
-      "iconPath": "image/pagelight.png",
-      "selectedIconPath": "image/page.png"
-    }]
-  },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#cdb30c",

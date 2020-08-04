@@ -6,5 +6,8 @@ App({
 
     let clientID = '4e2700812f54a06bb458';
     wx.BaaS.init(clientID)
+    wx.BaaS.auth.loginWithWechat().then(user => {
+      console.log(user);
+    })
   }
 })
