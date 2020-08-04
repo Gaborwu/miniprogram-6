@@ -1,2 +1,10 @@
 <!--pages/show/show.wxml-->
-<text>pages/show/show.wxml</text>
+    <view class="container" data-id="{{city.id}}">
+    <view class="city-container">
+            <image src="{{city.image}}" mode="aspectFill"></image>
+            <view class="text-container">
+                <view class="subHeader">{{city.name}}</view>
+                <view class="p">{{city.description}}</view>
+            </view>
+            </view>
+    </view>

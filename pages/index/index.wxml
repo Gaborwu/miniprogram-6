@@ -1,1 +1,12 @@
 <!--index.wxml-->
+<view class="page-container">
+    <view wx:for= "{{cities}}" class="container" data-id="{{item.id}}" bindtap="navigateToShow">
+    <view class="city-container">
+            <image src="{{item.image}}" mode="aspectFill"></image>
+            <view class="text-container">
+                <view class="subHeader">{{item.name}}</view>
+                <view class="p">{{item.description}}</view>
+            </view>
+            </view>
+    </view>
+</view>

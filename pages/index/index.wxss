@@ -1,1 +1,40 @@
 /**index.wxss**/
+page {
+  background-color: #e3dfc8;
+}
+.page-container {
+  width: 100%;
+}
+.container {
+  padding: 12px;
+  width: 50%;
+}
+.city-container {
+  border: 1px solid rgb(235,235,235);
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 12px;
+}
+
+.subHeader {
+  font-size: 48rpx;
+  font-weight: bolder;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.container image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+
+
+
+
