@@ -1,15 +1,30 @@
 <form bindsubmit="formSubmitToBaaS" catchreset="formRest">
 
 <view class="page-container">
-     <view class="weui-cells__title">Comment</view>
+    <view class="weui-cells__title">地点</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">
                 <view class="weui-cell__bd">
-                    <textarea name="comment" class="weui-textarea" placeholder="去过的地点，知道的活动见闻，统统罗列出来！" style="height: 3.3em" />
+                    <input name="place" class="weui-input" placeholder="分享您去过有趣的地点" />
+                </view>
+            </view>
+    </view>
+    <view class="weui-cells__title">Comment</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea name="comment" class="weui-textarea" placeholder="知道的活动见闻，统统罗列出来！" style="height: 3.3em" />
                     <view class="weui-textarea-counter">0/200</view>
                 </view>
             </view>
+    </view>
+    <view wx:if="{{!image}}" class="weui-cell">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cells__title">上传照片</view>
+            <image bindtap="submitPhoto" src="https://cloud-minapp-36450.cloud.ifanrusercontent.com/1k3f1xAF6LWUM6tj.png"></image>
         </view>
+    </view>
+    <image wx:else src="{{image.path}}" mode="aspectFill"></image>
     
     <view class="submitPhoto">
     </view>
