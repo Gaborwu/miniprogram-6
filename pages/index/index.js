@@ -17,6 +17,11 @@ Page({
       url: `../show/show?id=${id}`,
     })
   },
+  submitPost: function(res) {
+    wx.navigateTo({
+      url: '../post/post',
+    })
+  },
 
   onLoad: function (options) {
     this.FetchInformation();

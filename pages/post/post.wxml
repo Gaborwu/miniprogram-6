@@ -1,0 +1,19 @@
+<form bindsubmit="formSubmitToBaaS" catchreset="formRest">
+
+<view class="page-container">
+     <view class="weui-cells__title">Comment</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea name="comment" class="weui-textarea" placeholder="去过的地点，知道的活动见闻，统统罗列出来！" style="height: 3.3em" />
+                    <view class="weui-textarea-counter">0/200</view>
+                </view>
+            </view>
+        </view>
+    
+    <view class="submitPhoto">
+    </view>
+    <button type="primary" bindtap="submitStory" form-type="submit">发布</button>
+
+</view>
+</form>
