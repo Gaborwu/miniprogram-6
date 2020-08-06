@@ -10,3 +10,4 @@
             </view>
     </view>
 </view>
+<button type="primary" form-type="submit" bindtap="submitPost"> Submit Post</button>
