@@ -18,13 +18,15 @@
                 </view>
             </view>
     </view>
-    <view wx:if="{{!image}}" class="weui-cell">
+    <view class="weui-cell">
         <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cells__title">上传照片</view>
-            <image bindtap="submitPhoto" src="https://cloud-minapp-36450.cloud.ifanrusercontent.com/1k3f1xAF6LWUM6tj.png"></image>
+            <view class="weui-cells__title photo">上传照片</view>
+                <image wx:if="{{!image}}" class="submitphoto" bindtap="submitPhoto" src="https://cloud-minapp-36450.cloud.ifanrusercontent.com/1k3f1xAF6LWUM6tj.png"></image>
+                <image wx:else src="{{image.path}}" mode="aspectFill" class="photoSelected"></image>
+                
         </view>
     </view>
-    <image wx:else src="{{image.path}}" mode="aspectFill"></image>
+    
     
     <view class="submitPhoto">
     </view>

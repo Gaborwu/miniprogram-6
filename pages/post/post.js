@@ -6,8 +6,9 @@ Page({
 formSubmitToBaaS: function(e) {
    let description = e.detail.value.comment;
    let name = e.detail.value.place;
-   let image = this.data.image.path
-   let data = {name, description, image}
+   let image = this.data.image.path;
+   let user_id = this.data.user.id;
+   let data = {name, description, image, user_id}
    let City = new wx.BaaS.TableObject("city")
    let MyRecord = City.create();
    MyRecord.set(data).save().then (res =>{
@@ -26,7 +27,7 @@ formSubmitToBaaS: function(e) {
         let metaData = {categoryName: 'SDK'}
     
         MyFile.upload(fileParams, metaData).then(res => {
-          let data = res.data  // res.data 为 Object 类型
+          let data = res.data  
           console.log(data)
           this.setData({image: data})
         }, err => {
@@ -35,8 +36,12 @@ formSubmitToBaaS: function(e) {
       }
     })
  },
-
+ getUserInformation: function() {
+  wx.BaaS.auth.loginWithWechat().then(user => {
+     this.setData({user})
+    })
+},
  onLoad: function() {
-
+  this.getUserInformation();
  }
 })

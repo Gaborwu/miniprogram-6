@@ -61,6 +61,21 @@
 					"id": -1,
 					"name": "pages/post/post",
 					"pathName": "pages/post/post",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "id=5f2bfd4eb505c84ec9a0669d",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/show/show",
+					"pathName": "pages/show/show",
+					"query": "id=5f2bfd4eb505c84ec9a0669d",
 					"scene": null
 				}
 			]

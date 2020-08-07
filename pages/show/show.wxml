@@ -1,10 +1,41 @@
-<!--pages/show/show.wxml-->
-    <view class="container" data-id="{{city.id}}">
+<form bindsubmit="ReviewSubmit" catchreset="formRest">
+
+<view class="container" data-id="{{city.id}}">
     <view class="city-container">
+        <view class="image-container">
             <image src="{{city.image}}" mode="aspectFill"></image>
-            <view class="text-container">
-                <view class="subHeader">{{city.name}}</view>
-                <view class="p">{{city.description}}</view>
-            </view>
-            </view>
+        </view>
+        <view class="text-container">
+            <view class="subHeader">{{city.name}}</view>
+            <view class="p">{{city.description}}</view>
+        </view>
     </view>
+
+<view class="review-container">
+    <text class="subHeader"> 👀Review 👀</text>
+        <view class="reviewpart" wx:for="{{review}}">
+            <image class="photo" src="{{item.user_id.avatar}}"></image>
+            <view class="review-ttex">
+                <view class="nickname">{{item.user_id.nickname}}</view>
+                <view>{{item.review}}</view>
+            </view>
+        </view>  
+</view>
+
+        <view class="weui-cells__title section_title subHeader">用户评论</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+                    <view class="weui-cell__bd ">
+                        <textarea class="weui-textarea" name="review" placeholder="Enter Your Post" style="height: 3.3em" />
+                        <view class="weui-textarea-counter">0/200</view>
+                    </view>
+                </view>
+            </view>
+
+            <view class="btn">
+                <button style="margin: 30rpx 0" type="primary" formType="submit" >Submit</button>
+            </view>
+            
+    
+</view>
+</form>
